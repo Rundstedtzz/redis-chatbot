@@ -4,6 +4,7 @@
 1. [Introduction](#introduction)
 2. [Features & Commands](#features--commands)
 3. [Getting Started](#getting-started)
+4. [GenAI](#GenAI)
 
 ## Introduction
 The LoveYourself Chatbot is a Python-based chatbot project created for a NoSQL class. This chatbot uses Redis for data storage and offers multiple features like weather updates, fun facts, user-specific data storage, channel communications, and ask questions to large language model. The functionality of this chatbot will be continuously added and thank you for any questions, feedbacks and suggestions.
@@ -65,3 +66,5 @@ The LoveYourself Chatbot is a Python-based chatbot project created for a NoSQL c
 4. You can also use the QA functionality if you have any question to GPT4
 <img width="1284" alt="image" src="https://github.com/Rundstedtzz/redis-chatbot/assets/63605514/420da145-51f3-4bd9-afda-08503d5e1d6e">
 
+## GenAI
+I used ChatGPT to generate country list for weather function and fun facts. I also used ChatGPT for debugging purpose and for search engine purpose when Google cannot answer.
