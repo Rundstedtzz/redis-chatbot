@@ -1,9 +1,9 @@
 # LoveYourself Chatbot
 
 ## Table of Contents
-1. [Introduction](## Introduction)
-2. [Features & Commands](## Features & Commands)
-3. [Getting Started](## Getting Started)
+1. [Introduction](#introduction)
+2. [Features & Commands](#features--commands)
+3. [Getting Started](#getting-started)
 
 ## Introduction
 The LoveYourself Chatbot is a Python-based chatbot project created for a NoSQL class. This chatbot uses Redis for data storage and offers multiple features like weather updates, fun facts, user-specific data storage, channel communications, and ask questions to large language model. The functionality of this chatbot will be continuously added and thank you for any questions, feedbacks and suggestions.
