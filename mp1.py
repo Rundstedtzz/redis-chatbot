@@ -31,7 +31,6 @@ class Chatbot:
         
 
     def introduce(self):
-        # Add a header and footer
         header = "="*30 + " Welcome to LoveYourself Chatbot! " + "="*30
         footer = "="*80
         intro = f"""
@@ -135,15 +134,15 @@ class Chatbot:
 
     def process_commands(self, message):
         if message.lower() == 'exit':
-            self.shutdown_flag = True  # Set the flag to True
+            self.shutdown_flag = True 
             self.direct_message("Goodbye!")
             return
         # Handle special chatbot commands
         if message.startswith("!help"):
             self.direct_message("Here's a list of commands: !help, !weather, !fact, !whoami, !join, !leave, !send, !listen, !pm, !QA LLM, exit")
         elif message.startswith("!weather"):
-            city = message[len("!weather "):]  # Extracting the city name after '!weather ' to capture any spaces
-            city = city.strip('\'"')  # Remove quotes, if any
+            city = message[len("!weather "):] 
+            city = city.strip('\'"')  # Remove quotes
             weather_data = self.client.hgetall(f"weather:{city}")
             if weather_data:
                 weather_info = {k.decode('utf-8'): v.decode('utf-8') for k, v in weather_data.items()}
@@ -190,7 +189,6 @@ class Chatbot:
             question = question.strip('\'"')
             
             if self.openai_chat is None:
-                # Assuming direct_message method can handle this securely
                 openai_api_key = getpass("Please enter your OpenAI API key: ")
                 self.initialize_openai_chat(openai_api_key)
 
@@ -260,7 +258,6 @@ class Chatbot:
         # Subscribe to the channel
         self.pubsub.subscribe(channel)
 
-        # Listen for incoming messages
         def message_handler():
             try:
                 for message in self.pubsub.listen():
@@ -275,12 +272,11 @@ class Chatbot:
             except Exception as e:
                 print(f"An error occurred: {e}")
 
-        # Start a new thread for listening to the channel
         t = threading.Thread(target=message_handler)
         t.start()
         
     def initialize_openai_chat(self, api_key):
-        print(f"Received API key: {api_key}")  # Debugging line
+        print(f"Received API key: {api_key}")  # Debugging
         self.openai_chat = ChatOpenAI(temperature=0.0, model_name='gpt-4', openai_api_key=api_key)
 
 
@@ -308,7 +304,6 @@ if __name__ == "__main__":
         # Add a conditional to start listening to a channel
         if message.startswith("!listen"):
             channel = message.split(" ")[1]
-            # Assuming you'll add a listen_to_channel() method in the Chatbot class
             bot.listen_to_channel(channel)
 
         # Subscribe to private messages, assuming usernames are unique
