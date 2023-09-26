@@ -40,7 +40,7 @@ The LoveYourself Chatbot is a Python-based chatbot project created for a NoSQL c
 
 #### Setup （Step by step)
 1. Download the docker-compose.yml file (don't forget to change paths), go to the directory, and run `docker-compose up` to activate python and redis containers and allow these two containers to connect
-2. run `docker exec -it <container_id> bash` and `docker exec -it <container_id> redis_cli` to go to python and redis_cli containers (use different tabs of terminal to do so)
+2. run `docker exec -it <container_id> bash` and `docker exec -it <container_id> redis-cli` to go to python and redis-cli containers (use different tabs of terminal to do so)
 3. Download the mp1.py file and run `python mp1.py` to use the chatbot
 <img width="625" alt="image" src="https://github.com/Rundstedtzz/redis-chatbot/assets/63605514/66525435-a8b7-4f6d-8c66-ee1ea1c094ee">
 
@@ -55,7 +55,7 @@ The LoveYourself Chatbot is a Python-based chatbot project created for a NoSQL c
 <img width="713" alt="image" src="https://github.com/Rundstedtzz/redis-chatbot/assets/63605514/15f3c7de-557a-4102-871a-9f875792c16a">
 
 
-3. You can also play around with the channel commands and monitor the activities in channels by running `MONITOR` in redis_cli:
+3. You can also play around with the channel commands and monitor the activities in channels by running `MONITOR` in redis-cli:
 <img width="302" alt="image" src="https://github.com/Rundstedtzz/redis-chatbot/assets/63605514/127cec78-1d63-4716-a925-9a5b23678a66">
 <img width="954" alt="image" src="https://github.com/Rundstedtzz/redis-chatbot/assets/63605514/d46518bd-f86a-4e54-82a8-7da2c249c8d4">
 
